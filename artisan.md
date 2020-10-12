@@ -395,10 +395,10 @@ If you would like to display plain, uncolored console output, use the `line` met
 
 You may use the `newLine` method to display a blank line:
 
-    $this->newLine();
+    $this->output->newLine();
 
     // Write three blank lines...
-    $this->newLine(3);
+    $this->output->newLine(3);
 
 #### Table Layouts
 
