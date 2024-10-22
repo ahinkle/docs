@@ -248,6 +248,17 @@ $process = Process::timeout(120)->start('bash import.sh');
 $result = $process->wait();
 ```
 
+Sometimes you may need to wait for a specific condition to be met before proceeding. The `waitUntil` method allows you to wait until the given closure returns `true`:
+
+```php
+$process = Process::timeout(120)->start('bash import.sh');
+
+// ...
+
+$result = $process->waitUntil(fn () => $condition);
+```
+
+
 <a name="process-ids-and-signals"></a>
 ### Process IDs and Signals
 
